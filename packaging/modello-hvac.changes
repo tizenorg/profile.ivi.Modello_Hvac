@@ -1,3 +1,6 @@
+* Tue May 06 2014 brianjjones <brian.j.jones@intel.com> accepted/tizen/ivi/20140409.182221@9866621
+- Updated to work with Crosswalk.  TIVI-3076
+
 * Thu Apr 03 2014 brianjjones <brian.j.jones@intel.com> 10e3cb6
 - Initial checkin of the Modello HVAC app
 
