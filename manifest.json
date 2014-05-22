@@ -1,0 +1,12 @@
+{
+  "name": "Modello HVAC",
+  "version": "0.0.2",
+  "app": {
+    "launch":{
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "128": "HVAC_icon.png"
+  }
+}

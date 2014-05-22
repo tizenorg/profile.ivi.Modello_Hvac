@@ -26,3 +26,4 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 /opt/usr/apps/.preinstallWidgets/Modello_Hvac.wgt
+/opt/usr/apps/_common/icons/HVAC_icon.png
