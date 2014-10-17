@@ -1,3 +1,6 @@
+* Thu Oct 16 2014 Brian Jones <brian.j.jones@intel.com> submit/tizen_ivi/20141008.200057-1-g86327ab
+- Fix for TC-1468.  Also enabling buttons to be pressed as a temporary workaround
+
 * Tue Oct 07 2014 Brian Jones <brian.j.jones@intel.com> submit/tizen_ivi/20141007.174646-1-g057edf8
 - clean spec file
 - Fix for TC-1560 UI always zoomed out
