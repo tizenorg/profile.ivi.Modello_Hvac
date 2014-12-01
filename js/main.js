@@ -2,7 +2,7 @@
 
 /**
  * Heat, Ventilation and Air Conditioning provides UI controls to operate this subystem of the car from
- * [tizen.vehicle API](https://raw.github.com/otcshare/automotive-message-broker/master/docs/amb.idl).
+ * [navigator.vehicle API](https://raw.github.com/otcshare/automotive-message-broker/master/docs/amb.idl).
  * Uses mainly {{#crossLink "CarIndicator"}}{{/crossLink}} module from {{#crossLink "Bootstrap/carIndicator:property"}}{{/crossLink}}.
  *
  * Application directly controls following AMB properties:

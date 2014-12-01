@@ -1,3 +1,6 @@
+* Mon Dec 01 2014 Brian Jones <brian.j.jones@intel.com> accepted/tizen/3.0.m14.3/ivi/20141018.100009-1-gce7f5a8
+- Changed to use the navigator.vehicle namespace - TC-2055
+
 * Thu Oct 16 2014 Brian Jones <brian.j.jones@intel.com> submit/tizen_ivi/20141008.200057-1-g86327ab
 - Fix for TC-1468.  Also enabling buttons to be pressed as a temporary workaround
 
