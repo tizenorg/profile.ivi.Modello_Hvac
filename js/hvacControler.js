@@ -553,28 +553,7 @@ hvacControler.prototype.initButtons = function() {
 			}
 			bootstrap.carIndicator.setStatus("seatHeaterRight", status);
 
-			if (status === 0) {
-				bootstrap.carIndicator.setStatus("HeatedSeatFRModeRequest", 3);
-			} else {
-				bootstrap.carIndicator.setStatus("HeatedSeatFRModeRequest", 0);
-			}
-
-			var request;
-
-			switch (status) {
-			case 0:
-			case 1:
-				request = status;
-				break;
-			case 2:
-				request = 3;
-				break;
-			case 3:
-				request = 5;
-				break;
-			}
-
-			bootstrap.carIndicator.setStatus("HeatedSeatFRRequest", request);
+			bootstrap.carIndicator.setStatus("HeatedSeatFRRequest", status);
 		}
 	});
 	// SeatHeater - front left
@@ -592,29 +571,7 @@ hvacControler.prototype.initButtons = function() {
 				break;
 			}
 			bootstrap.carIndicator.setStatus("seatHeaterLeft", status);
-
-			if (status === 0) {
-				bootstrap.carIndicator.setStatus("HeatedSeatFLModeRequest", 3);
-			} else {
-				bootstrap.carIndicator.setStatus("HeatedSeatFLModeRequest", 0);
-			}
-
-			var request;
-
-			switch (status) {
-			case 0:
-			case 1:
-				request = status;
-				break;
-			case 2:
-				request = 3;
-				break;
-			case 3:
-				request = 5;
-				break;
-			}
-
-			bootstrap.carIndicator.setStatus("HeatedSeatFLRequest", request);
+			bootstrap.carIndicator.setStatus("HeatedSeatFLRequest", status);
 		}
 	});
 	// AirflowDirection - FloorDuct - 1 (FOOT)

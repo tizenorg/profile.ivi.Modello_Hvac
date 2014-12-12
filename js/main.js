@@ -111,7 +111,6 @@ var init = function() {
 					}
 				}
 				bootstrap.carIndicator.setStatus("targetTemperatureLeft", ($(this).val() + 29) - ($(this).val() * 2));
-				bootstrap.carIndicator.setStatus("FrontTSetLeftCmd", ($(this).val() + 29) - ($(this).val() * 2));
 			}
 		});
 
@@ -124,7 +123,6 @@ var init = function() {
 			orientation : "vertical",
 			slide : function() {
 				bootstrap.carIndicator.setStatus("targetTemperatureRight", ($(this).val() + 29) - ($(this).val() * 2));
-				bootstrap.carIndicator.setStatus("FrontTSetRightCmd", ($(this).val() + 29) - ($(this).val() * 2));
 			}
 		});
 
