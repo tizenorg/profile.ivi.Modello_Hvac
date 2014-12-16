@@ -1,3 +1,9 @@
+* Mon Dec 15 2014 Brian Jones <brian.j.jones@intel.com> submit/tizen_ivi/20141213.000015-1-g4163931
+- More set commands being implemented. Defrost, fanspeed, seat heater, and hazard
+
+* Fri Dec 12 2014 Brian Jones <brian.j.jones@intel.com> accepted/tizen/ivi/20141202.054127-1-ge1aa1a7
+- Updates to utilize AMB set calls
+
 * Mon Dec 01 2014 Brian Jones <brian.j.jones@intel.com> accepted/tizen/3.0.m14.3/ivi/20141018.100009-1-gce7f5a8
 - Changed to use the navigator.vehicle namespace - TC-2055
 

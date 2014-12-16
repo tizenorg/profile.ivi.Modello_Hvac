@@ -453,11 +453,6 @@ hvacControler.prototype.initButtons = function() {
 	"use strict";
 	// Hazard
 	$("#hazard_btn").bind('click', function() {
-		//This is temporary until AMB supports setting values from JS
-		bootstrap.carIndicator.status.hazard = !bootstrap.carIndicator.status.hazard;
-		hvacControler.prototype.onHazardChanged(bootstrap.carIndicator.status.hazard);
-		//TODO remove once functionality exists for each button
-
 		bootstrap.carIndicator.setStatus("hazard", !bootstrap.carIndicator.status.hazard);
 		bootstrap.carIndicator.setStatus("DirectionIndicationINST", !bootstrap.carIndicator.status.hazard ? 3 : 0);
 		bootstrap.carIndicator.setStatus("DirectionIndicationMS", !bootstrap.carIndicator.status.hazard ? 3 : 0);
@@ -531,9 +526,6 @@ hvacControler.prototype.initButtons = function() {
 	});
 	// AirRecirculation
 	$("#fan_control_circ").bind('click', function() {
-		bootstrap.carIndicator.status.airRecirculation = !bootstrap.carIndicator.status.airRecirculation;
-		hvacControler.prototype.onAirRecirculationChanged(bootstrap.carIndicator.status.airRecirculation);
-
 		bootstrap.carIndicator.setStatus("airRecirculation", !bootstrap.carIndicator.status.airRecirculation);
 		bootstrap.carIndicator.setStatus("RecircReq", !bootstrap.carIndicator.status.airRecirculation ? 1 : 0);
 	});
@@ -578,7 +570,7 @@ hvacControler.prototype.initButtons = function() {
 	$("#fan_dir_down_btn").bind('click', function() {
 		var currentStatus = bootstrap.carIndicator.status.airflowDirection;
 														//TODO removed temp until set is enabled
-		if ((currentStatus >= 0) && (currentStatus <= 7)){ // && (bootstrap.carIndicator.status.fanSpeed !== 0)) {
+		if ((currentStatus >= 0) && (currentStatus <= 7) && (bootstrap.carIndicator.status.fanSpeed !== 0)) {
 			var newStatus = changeAirflowDirectionStatus("#fan_dir_down_btn", currentStatus, 1);
 			hvacControler.prototype.onAirflowDirectionChanged(1);
 			setAirFlowDirectionStatus(newStatus);
@@ -587,7 +579,7 @@ hvacControler.prototype.initButtons = function() {
 	// AirflowDirection - Defroster - 4 (SCREEN)
 	$("#fan_dir_up_btn").bind('click', function() {
 		var currentStatus = bootstrap.carIndicator.status.airflowDirection;
-		if ((currentStatus >= 0) && (currentStatus <= 7)){ // && (bootstrap.carIndicator.status.fanSpeed !== 0)) {
+		if ((currentStatus >= 0) && (currentStatus <= 7) && (bootstrap.carIndicator.status.fanSpeed !== 0)) {
 			var newStatus = changeAirflowDirectionStatus("#fan_dir_up_btn", currentStatus, 4);
 			hvacControler.prototype.onAirflowDirectionChanged(4);
 			setAirFlowDirectionStatus(newStatus);
@@ -596,7 +588,7 @@ hvacControler.prototype.initButtons = function() {
 	// AirflowDirection - Front - 2 (FACE)
 	$("#fan_dir_right_btn").bind('click', function() {
 		var currentStatus = bootstrap.carIndicator.status.airflowDirection;
-		if ((currentStatus >= 0) && (currentStatus <= 7)){ // && (bootstrap.carIndicator.status.fanSpeed !== 0)) {
+		if ((currentStatus >= 0) && (currentStatus <= 7) && (bootstrap.carIndicator.status.fanSpeed !== 0)) {
 			var newStatus = changeAirflowDirectionStatus("#fan_dir_right_btn", currentStatus, 2);
 			hvacControler.prototype.onAirflowDirectionChanged(2);
 			setAirFlowDirectionStatus(newStatus);
@@ -628,16 +620,10 @@ hvacControler.prototype.initButtons = function() {
 	});
 	// Defrost - Rear
 	$("#defrost_rear_btn").bind('click', function() {
-		bootstrap.carIndicator.status.rearDefrost = !bootstrap.carIndicator.status.rearDefrost;
-		hvacControler.prototype.onRearDefrostChanged(bootstrap.carIndicator.status.rearDefrost);
-
 		bootstrap.carIndicator.setStatus("rearDefrost", !bootstrap.carIndicator.status.rearDefrost);
 	});
 	// Defrost - Front
 	$("#defrost_front_btn").bind('click', function() {
-		bootstrap.carIndicator.status.frontDefrost = !bootstrap.carIndicator.status.frontDefrost;
-		hvacControler.prototype.onFrontDefrostChanged(bootstrap.carIndicator.status.frontDefrost);
-
 		bootstrap.carIndicator.setStatus("frontDefrost", !bootstrap.carIndicator.status.frontDefrost);
 	});
 };
